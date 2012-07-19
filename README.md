@@ -18,3 +18,5 @@ tiCardIO_IOS
 	      Ti.API.info(' info ' + JSON.stringify(data));
     });
 
+Sign up for an account at https://www.card.io/, create an app, and take note of your app_token. Replace it in
+the code above and you are off and running, ready to scan some cards.
