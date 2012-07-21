@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+apiversion: 2
+description: Clearly Innovative Inc
+author: Clearly Innovative Inc
+license: Clearly Innovative Inc
+copyright: Clearly Innovative Inc
+
+
+# these should not be edited
+name: ti_cardio
+moduleid: ti.cardio
+guid: dd37d10b-20bc-4b71-9ecb-f692c13978a6
+platform: iphone
+minsdk: 2.1.0.GA

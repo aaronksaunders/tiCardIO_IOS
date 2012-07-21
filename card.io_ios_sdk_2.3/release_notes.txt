@@ -1,0 +1,71 @@
+card.io iOS SDK release notes
+=============================
+
+2.3 (Tue 6/26/2012)
+
+* Add JCB support.
+* Add scanned property to CardIOCreditCardInfo.
+* Replace CardIOPaymentViewController's -initWithPaymentDelegate:forceManualEntry: with -initWithPaymentDelegate:scanningEnabled:. As before, this method should only be used for testing purposes. Note that the semantics for forceManualEntry: and scanningEnabled: are flipped (if you were using YES, now use NO).
+* Remove support for payment processing (now scan only).
+* The MessageUI framework is no longer used.
+
+-------------
+
+2.2 (Mon 3/26/2012)
+
+* Add disableManualEntryButtons and supporting methods to CardIOPaymentViewController.
+* Remove calls to UIDevice's uniqueIdentifier.
+
+-------------
+
+2.1 (Tue 2/7/2012)
+
+* Drop support for 3.x. The minimum iOS version supported is now 4.0.
+* The SDK now requires the Security framework.
+* Minor UI and usability improvements.
+* Bug fixes.
+* Enhanced fraud detection and security.
+
+-------------
+
+2.0 (Thu 1/19/2012)
+
+* Added payment processing capabilities. See CardIO.h for a list of header files, and https://www.card.io/integrate/ios for integration instructions and sample code.
+* Removed deprecated CardIOPaymentViewControllerDelegate methods.
+* CardIOCreditCardInfo now implements NSCopying and uses copy properties.
+* CardIOPaymentViewController can now be used in a form sheet on the iPad.
+* UI improvements and bug fixes.
+
+-------------
+
+1.2 (Thu 8/24/2011)
+
+* Easier integration: Instead of requiring files to be Objective-C++ (.mm), you can just use the linker flag -lstdc++ (add it to "Other Linker Flags").
+* Added -redactedCardNumber to CardIOCreditCardInfo class.
+* Improved card detection.
+* Fixed minor memory leak.
+* Minor data entry bug fixes.
+
+-------------
+
+1.1.1 (Wed 8/3/2011)
+
+* Bug fix: Returned card number no longer contains spaces.
+* Several manual entry bug fixes.
+
+-------------
+
+1.1 (Wed 7/27/2011)
+
+* Added CardIOCreditCardInfo class. This is a data class that encapsulates the properties of a card: number, expiration, cvv, card type, etc.
+* CardIOPaymentViewControllerDelegate now vends CardIOCreditCardInfo instances.
+* Deprecated userDidProvideCreditCardNumber:expiryMonth:expiryYear:cvv:inPaymentViewController: in favor of userDidProvideCreditCardInfo:inPaymentViewController:.
+* Added ability to optionally collect any/all of expiry, cvv, and zip code. (Previously, expiry was always collected and cvv was optional.)
+* Improved capture frame rate.
+* Usability improvements to manual entry.
+
+-------------
+
+1.0 (Tue 5/17/2011)
+
+* First release.
